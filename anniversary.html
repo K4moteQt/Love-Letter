@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Anniversary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sky" aria-hidden="true">
+  <div class="sun"></div>
+  <div class="bokeh"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+</div>
+
+<!-- STEP 1: The Choice -->
+<section class="intro" id="intro">
+  <div class="choice-container" id="choice-container">
+    <h2 class="choice-title">Are you ready for your surprise?</h2>
+    <div class="choice-buttons">
+      <button class="open btn-yes" id="btn-yes" type="button">Yes, show me!</button>
+      <button class="btn-no" id="btn-no" type="button">No, I'm scared</button>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: The Envelope Overlay -->
+<div class="envelope-wrapper" id="envelope-wrapper" hidden>
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="envelope-body"></div>
+      <div class="wax-seal">Tap to Open</div>
+    </div>
+  </div>
+
+<!-- STEP 3: The Stage (Revealed after envelope opens) -->
+<main class="stage" id="stage" tabindex="-1" hidden>
+  <header class="hero">
+    <h1 class="reveal">Happy Anniversary, my love</h1>
+  </header>
+
+  <div class="grid">
+    <div class="photo-col">
+      <figure class="polaroid reveal">
+        <div class="photo">
+          <img id="photo" alt="A photo of the two of us" width="400" height="400">
+          <!-- The Scratch-Off Canvas -->
+          <canvas id="scratch-pad"></canvas>
+        </div>
+        <figcaption>10 - 04 - 25</figcaption>
+      </figure>
+    </div>
+
+    <article class="letter" aria-label="Anniversary letter">
+      <div id="typewriter-container">
+        <!-- Letter text is typed here by JavaScript -->
+      </div>
+      <p class="sign reveal" id="sign-off" style="opacity: 0;">Ay Ayaten ka unay <span class="heart">&#9829;</span></p>
+    </article>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
